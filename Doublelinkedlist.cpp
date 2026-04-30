@@ -110,5 +110,16 @@ public:
             if (START != NULL)
                 START->prev = NULL; // Step 2b: START.prev = NULL
         }
+
+        else
+        {
+//Hubungkan node sebelumnya ke node berikutnya dari node saat ini
+        current->prev->next = current->next;
+
+//Jika saat ini bukan node terakhir
+        if (current->next != NULL)
+        current->next->prev = current->prev;
+        }
+
     }
 };
