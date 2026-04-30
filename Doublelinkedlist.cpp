@@ -53,6 +53,7 @@ public:
             START = newNode;
             return;
         }
+        }
 
         // insert in between node
         // Step 8: Locate position for insertion
@@ -75,8 +76,16 @@ public:
         // insert last node
         if (current->next != NULL)
             current->next->prev = newNode; // Step 9c: current.next.prev = newNode
-            
+
         current->next = newNode; 
     }
+    
+    void hapus()
+    {
+        if (START == NULL)
+        {
+            cout << "\nList is empty" << endl;
+            return;
+        }
     }
 };
