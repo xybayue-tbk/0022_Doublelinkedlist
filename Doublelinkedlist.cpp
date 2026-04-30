@@ -120,6 +120,8 @@ public:
         if (current->next != NULL)
         current->next->prev = current->prev;
         }
-
+//Hapus node
+        delete current;
+        cout << "Record with roll number " << rollNo << " deleted" << endl;
     }
 };
